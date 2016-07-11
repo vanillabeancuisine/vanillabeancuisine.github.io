@@ -1,0 +1,10 @@
+
+vanillabeancuisine.com redirects to github via
+    - resource: http://www.curtismlarson.com/blog/2015/04/12/github-pages-google-domains/
+    - github: 	CNAME entry sends redirects to google account
+    - google: 	DNS entries to map addresses ("A") to github (192.30.252.153, 192.30.252.154)
+		** https://domains.google.com/
+		DNS entry to map CNAME to vanillabeancuisine.github.io
+
+
+_config.yml ensures that files starting with "_" we need to be exported to the webserver are included by jekyll
