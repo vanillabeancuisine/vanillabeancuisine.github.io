@@ -1,0 +1,227 @@
+@charset "UTF-8";
+
+/*
+   css Copyright © 2005-2012 Karelia Software. All rights reserved.
+   css released under Creative Commons License  - http://creativecommons.org/licenses/by-sa/2.5/
+   All associated graphics belong to their respective owners and are licensed separately.
+*/
+
+/* IE7 hacks */
+
+*:first-child+html .gridItem img {
+	position:relative;
+	top:0px;
+}
+
+*:first-child+html .gridItem h3 {
+	position:relative;
+	top:0px;
+}
+
+/* Navigation arrows */
+div.text-navigation { text-align:center; margin-bottom:1em;}
+div.text-navigation div { display:inline; margin:0px 0.5em; }
+.collection-navigation .disabled-navigation { text-indent:-5000px; }
+
+/* 2.0 wrap compatibility. 2.0-compatible designs can further adjust these if they need */
+.wide { display:block; }
+
+.narrow.left {   /* Some designs won't respect without !important */
+    float:left!important;
+    clear:left!important;
+}
+.narrow.right {
+    float:right!important;
+    clear:right!important;
+}
+
+.wide.left   .graphic, img.wide.left,   .wide.left video,   .wide.left audio   { display:block; margin-left:0px; margin-right:auto; }
+.wide.center .graphic, img.wide.center, .wide.center video, .wide.center audio { display:block; margin-left:auto; margin-right:auto; }
+.wide.right  .graphic, img.wide.right,  .wide.right video,  .wide.right audio  { display:block; margin-left:auto; margin-right:0px; }
+
+
+.ImageElement.left, .AudioElement.left { text-align:left; }
+.ImageElement.center, .AudioElement.center { text-align:center; }
+.ImageElement.right, .AudioElement.right { text-align:right; }
+
+/* Captions should align themselves with the graphic */
+.graphic-container.left .caption { text-align:left; }
+.graphic-container.center .caption { text-align:center; }
+.graphic-container.right .caption { text-align:right; }
+
+/* Inline iframes need to display as a block to layout right */
+.graphic iframe { display:block; }
+
+/* Pagelet photo grids should be generally be auto width (some 1.x designs hardcoded an exact width) */
+.pagelet .photogrid-index { width:auto; }
+
+/* For content like amazon which forces white background. Design SHOULD set color for A tag and text color. */
+.whiteBackground
+{
+	background-color:white;
+}
+
+.article-info
+{
+	margin-bottom:1em;
+}
+
+/* Firefox reduce dotted lines on links */
+.photo-navigation a:focus, .replaced a:focus {overflow:hidden;}
+
+/* Disqus correction to prevent overflow scroll bars in some designs */
+#dsq-content { overflow:hidden; }
+#dsq-content .dsq-auth-header { width: auto!important; }
+#dsq-content .dsq-by { margin: 4px 6px 0px 0px; }
+#dsq-content .dsq-by a, #dsq-content .dsq-by a:hover { border: 0px none; }
+#dsq-content h3 { margin:0px; }
+
+/* Site menus. Don't wrap the top level items, and wrap sub-menu items normaly. */
+#sitemenu-content ul li span.in { white-space:nowrap;}
+* html #sitemenu-content ul li span.in {white-space: normal}
+*:first-child+html #sitemenu-content ul li span.in {white-space: normal}
+#sitemenu-content ul ul li span.in {white-space: normal}
+#sitemenu-content span.in { position: relative; }
+
+body { word-wrap:break-word; }
+
+/* Make sure scaled-down images look good in IE */
+img { -ms-interpolation-mode: bicubic; }
+
+.HTMLElement { overflow:hidden; }
+
+/* Overall pagelet */
+div.rssBadge
+{
+	margin: 10px;
+}
+
+/* Small icon option */
+img.smallRSSBadgeIcon { vertical-align:middle; }
+img.smallRSSBadgeIconLeft { margin-right:3px; }
+img.smallRSSBadgeIconRight { margin-left:3px; }
+
+/* Large icon option */
+div.largeRSSBadgeIcon, p.largeRSSBadgeIcon
+{
+	margin: 0 10px;
+	text-align:center !important;
+}
+
+img.largeRSSBadgeIcon { margin-bottom: 4px; }
+p.largeRSSBadgeIcon { margin: 0; }
+
+.social-bar-button a {border-bottom-style:none !important;}
+
+.photogrid-index-bottom { clear:left; }
+
+/* 
+-- Blue Raymond --
+v1.0
+A Design for Sandvox created by BehindTheRabbit
+http://www.behindtherabbit.com/
+*/
+
+a:link, a:visited {color:#418DD9; text-decoration:none;}
+a:hover, a:active {color:#222; text-decoration:underline;}
+
+table { font-size:90%;}
+dl {font-family: Courier, "Courier New", monospace; font-size:1.2em;}
+dd {font-size:1.2em;}
+pre {overflow:scroll; font-size:1.2em; font-family: Courier, "Courier New", monospace;}
+* html pre {padding:5px 10px; width:480px;}
+
+.clear {clear: both; height: 0;}
+.hidden {display:none;}
+.timestamp {text-align:right; color:#999; font-family:Georgia, "Times New Roman", Times, serif; font-style:italic; clear:both;}
+.js-kit-comments {color:#333;}
+
+.pagelet {word-wrap:break-word; overflow:hidden; }
+img {border:none;}
+img.narrow {display:block;float:right; clear:right; margin-left:10px;}
+img.wide {display:block;clear:both;}
+.ImageElement, .VideoElement { text-align:center;}
+
+body {font-size:76%; margin:0; padding:0; font-family:Arial, Helvetica, sans-serif;}
+#page-container {width:900px; margin:0 auto;}
+#page-top {height:180px;}
+#title {height:133px; overflow:hidden;}
+img#logo {float:right;}
+h1 {margin:0; padding:35px 0 0 0; font-size:3.2em; color:#418DD9; font-weight:normal;}
+h1 a:hover, h1 a:active {text-decoration:none;}
+#title p {margin:0; padding:0 0 0 3px; font-size:1.1em; color:#418DD9;}
+#sitemenu {background:url(nav-bg.png) 0 0 repeat-x #418DD9; color:#333; font-weight:bold;}
+#sitemenu-content {margin:0; padding:5px;}
+#sitemenu-content ul {margin:0; padding:0;}
+#sitemenu-content li {display:inline; margin:0; padding:0 5px; list-style-type:none;}
+.currentParent a:link, .currentParent a:visited {color:#AFD6FF !important; }
+.currentParent a:hover, .currentParent a:active {color:#000 !important; }
+#sitemenu-content li a {text-decoration:none;}
+#sitemenu-content li a:link, #sitemenu-content li a:visited {color:#FFF;}
+#sitemenu-content li a:hover, #sitemenu-content li a:active {color:#000;}
+#sidebar-container {width:290px; float:left; border-right:1px dashed #DDD; padding-right:20px;}
+#main {min-height:450px; font-size:1.1em; color:#222; line-height:1.6em;}
+body.no-sidebar #main-content > .no-callout {
+	-webkit-column-count:2; -webkit-column-gap:30px;
+	-moz-column-count:2; -moz-column-gap:30px;
+}
+body.allow-sidebar #main {width:560px; float:right;}
+#main-content h2 {font-size:2em; color:#222; line-height:1.4em; margin-top:0;}
+.article h3 {clear:both; margin-top:40px; font-weight:normal; padding-top:5px; border-top: 1px dashed #DDD; line-height:2em;}
+.article h3 a {font-size:1.4em;}
+.gridItem {float:left; width:128px; height:160px; overflow:visible;}
+.elementIntroduction {clear:both;}				/* e' anche nei pagelets */
+#page-bottom {border-top:1px solid #CCC; margin-top:20px; padding:20px;}
+#page-bottom-contents {text-align:center; color:#999; font-size:0.9em; letter-spacing:0.1em;}
+			
+/* PAGELETS */
+#sidebar .pagelet {color:#222; line-height:1.6em; margin-bottom:10px;}
+#sidebar .bordered {border:1px solid #DDD; padding:10px; -webkit-box-shadow:0 2px 2px #999; -moz-box-shadow:0 2px 2px #999; margin:10px 0;}
+#sidebar .bordered h4 {border:none !important; margin-top:0px;}
+#sidebar .pagelet h4 {font-size:1.4em; margin:10px 0 5px 0;}
+#sidebar .pagelet-body ul, #sidebar .pagelet-body li {line-height:1.4em;}
+.callout-container {width:240px; float:right; margin-left:10px; font-family:Georgia, "Times New Roman", Times, serif; color:#333;}			/* sempre presente */
+#main .pagelet {padding:0 10px; margin-bottom:1px; line-height:1.4em;}
+#main .bordered {border:1px solid #CCC; padding:10px; -webkit-box-shadow:0 2px 2px #999; -moz-box-shadow:0 2px 2px #999;}
+#main .bordered h4 {margin-top:10px;}
+#main .pagelet h4 {text-align:center; font-size:1.2em;}
+#main .i1 h4 { margin-top:5px;}
+
+/* GRIDS */
+.photogrid-index {padding-top:30px;}
+.gridItem {float:left;	position:relative; width:172px; height:188px; overflow:hidden; margin:0 8px 8px 4px; text-align:center; padding: 4px 0;
+	border-top:1px solid #EEE;	
+	border-left:1px solid #EEE;
+	border-right:1px solid #CCC;
+	border-bottom:1px solid #CCC;
+	}
+* html .gridItem {margin:0 4px 8px 2px;}
+body.no-sidebar .gridItem {float:left;	position:relative; height:188px; overflow:hidden;	margin:0 18px 8px 18px; text-align:center; padding: 4px 0;}
+* html body.no-sidebar .gridItem {margin:0 9px 8px 9px;}
+.gridItem h3 {padding: 0 4px; text-align:center; position:absolute; top:140px; width:164px; font-size:0.8em; line-height:1.4em; font-weight:normal;}
+* html .gridItem h3 {position: relative; top: 0px;}
+.gridItem img {margin: auto!important; display:block; position: absolute; top: 0; bottom: 48px; right: 0; left: 0;}
+* html .gridItem img {position: relative;}
+
+.collection-navigation {height:50px; padding-bottom:10px;}
+.collection-navigation {clear:both;}
+.text-navigation {padding:0 0 20px 0; font-size:0.8em;}
+.text-navigation .previous-page, .text-navigation .next-page, .text-navigation .collection-index {display:block; text-align:right; border-right:10px solid #DDD; padding:0px 5px 0px 2px; margin-bottom:1px; letter-spacing:0.1em;}
+.text-navigation a:link, .text-navigation a:visited { text-decoration:none;}
+.text-navigation a:hover, .text-navigation a:active { text-decoration:underline;}
+.photo-navigation {width:150px; margin:10px auto 0 auto; height:30px;}
+.photo-navigation .previous-page { background: url(arrows.png) -50px -20px no-repeat;}							
+.photo-navigation .previous-page .imageLink { background: url(arrows.png) -50px 0 no-repeat;}
+.photo-navigation .previous-page .imageLink:hover { background: url(arrows.png) -51px 1px no-repeat;}
+.photo-navigation .next-page { background: url(arrows.png) 0 -20px no-repeat;}
+.photo-navigation .next-page .imageLink { background: url(arrows.png) 0 0 no-repeat;}
+.photo-navigation .next-page .imageLink:hover { background: url(arrows.png) 1px 1px no-repeat;}
+.photo-navigation .collection-index .imageLink { background: url(arrows.png) -100px 0 no-repeat;}
+.photo-navigation .collection-index .imageLink:hover { background: url(arrows.png) -101px 1px no-repeat;}
+.photo-navigation div,
+.photo-navigation a:link,
+.photo-navigation div, .photo-navigation a:link, .photo-navigation a:visited {display:block; float:left; width:50px; height:20px; text-indent: -9999px;}
+
+
+.callout-container, .graphic-container { clear:both; }
+
