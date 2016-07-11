@@ -1,2 +1,3 @@
-include: [ "paris/_Media" ]
+include: 
+  - "paris/_Media"
 
