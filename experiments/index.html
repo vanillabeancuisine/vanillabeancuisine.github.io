@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html><head>
+<title>test</title>
+<script type=text/javascript>
+function Test1(el) {
+/* do something */
+  alert(el.selectedIndex);
+}
+</script>
+</head>
+<body>
+<form name=theForm>
+<select id="TestSelect1" name="TestSelect1" onchange='Test1(this);'>
+<option>Option 0</option>
+<option>Test 1</option>
+<option>Test 2</option>
+<option>Test 3</option>
+<option>Test 4</option>
+</select>
+</form>
+</body>
+
