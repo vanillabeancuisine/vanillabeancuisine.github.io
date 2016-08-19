@@ -1,22 +1,19 @@
-<!DOCTYPE html>
-<html><head>
-<title>test</title>
-<script type=text/javascript>
-function Test1(el) {
-/* do something */
-  alert(el.selectedIndex);
+<html>
+<head>
+<script>
+function run() {
+        setInterval("openURL()", 1);
 }
+function openURL() {
+        var urlToOpen = url_types[Math.floor(Math.random()*url_types.length)]+":testtest";
+        console.log("Open "+urlToOpen);
+        ifrm = document.createElement("iframe");
+        ifrm.setAttribute("src", urlToOpen);
+        document.body.appendChild(ifrm);
+}
+var url_types = ["http", "https", "rdar", "radar", "ftp", "feed", "feeds", "tel", "telprompt", "callto", "telshow", "tellock", "telanswer", "telemergency", "vmshow", "diags", "sms", "itms-apps", "itms-appss", "itms", "itmss", "youtube", "iad", "iad+file", "maps"];
 </script>
 </head>
-<body>
-<form name=theForm>
-<select id="TestSelect1" name="TestSelect1" onchange='Test1(this);'>
-<option>Option 0</option>
-<option>Test 1</option>
-<option>Test 2</option>
-<option>Test 3</option>
-<option>Test 4</option>
-</select>
-</form>
+<body onLoad="run()">
 </body>
-
+</html>
